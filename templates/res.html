@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      .match{ color: red; }
+    </style>
+
+  <title>Résultats - Les minutes du procès Nuremberg</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href=".">Recherche par mots clés</a>
+          <a class="nav-item nav-link" href="/speaker">Recherche par intervenant</a>
+          <a class="nav-item nav-link" href="/spJournee">Recherche par intervenant/journée</a>
+        </div>
+      </div>
+    </nav>
+
+  
+    
+<br>
+
+
+<div class="container">
+
+
+<div class="col">
+<h3 style="text-align: center;">{{ n }} résultats trouvés en {{ tm }} secondes</h3>
+<br>
+{% for i in res %}
+   <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ i[0] }} </h5>
+        <p style="color:royalblue;">{{ i[1] }} : </p>
+        <p>{{ i[2]|safe }}</p>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  {% endfor %}
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+  </body>
+</html>

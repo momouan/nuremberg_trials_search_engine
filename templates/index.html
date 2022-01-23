@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Les minutes du procès Nuremberg</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href=".">Recherche par mots clés</a>
+          <a class="nav-item nav-link" href="/speaker">Recherche par intervenant</a>
+          <a class="nav-item nav-link" href="/spJournee">Recherche par intervenant/journée</a>
+        </div>
+      </div>
+    </nav>
+
+
+
+<div class="text-center">
+<img src="{{url_for('static', filename='logo.png')}}" class="container" style="width: 1000px; margin-top: 300px;">
+</div>
+
+
+
+    
+<br>
+
+
+
+<div class="container">
+
+<form class="col" method="GET" action='/search'>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Keyword" name="q">    
+  </div>
+  <button type="submit" class="btn btn-primary" style="background-color:#3ba857; border-color: #3ba857;">Search</button>
+</form>
+   
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+  </body>
+</html>
